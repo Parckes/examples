@@ -1,11 +1,11 @@
 ## Here you can find examples of my coding
 
-[###Basic algorithms](.navigation/basic.md)
+[### Basic algorithms](.navigation/basic.md)
 
-###Not so basic algorithms
+### Not so basic algorithms
 
-###Data structures
+### Data structures
 
-###C++ entities implementation
+### C++ entities implementation
 
-###Beta/lost, but still interesting
+### Beta/lost, but still interesting
