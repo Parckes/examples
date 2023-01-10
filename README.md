@@ -1,6 +1,6 @@
 ## Here you can find examples of my coding
 
-[### Basic algorithms](.navigation/basic.md)
+### [Basic algorithms](.navigation/basic.md)
 
 ### Not so basic algorithms
 
