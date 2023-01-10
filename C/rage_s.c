@@ -10,6 +10,7 @@ void HP (int n, int hp[]) {
         scanf ("%d", &hp[i]);
     return;
 }
+
 void attack (int hp[], int n, int diff) {
     int d;
     hp[n-1] -= diff;

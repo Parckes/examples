@@ -13,7 +13,7 @@ long_number division_by_two(long_number l) {
     int k = 0;
     for (int i = 0; i < l.size; i++) {
         int x = (int) (l.s[i] - '0') + k * module;
-        l.s[i] = (char) (x/2 + '0');
+        l.s[i] = (char) (x / 2 + '0');
         k = x % 2;
     }
     return l;
@@ -63,10 +63,12 @@ int main() {
             if (c >= '0' && c <= '9') {
                 s[size] = c;
                 size += 1;
-            } else {
+            }
+            else {
                 printf("%c", c);
             }
-        } else {
+        }
+        else {
             long_number l;
             l.s = s;
             l.size = size;

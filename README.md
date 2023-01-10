@@ -1,10 +1,10 @@
 ## Here you can find examples of my coding
 
-### [Basic algorithms](.navigation/basic.md)
+### [Basic algorithms and concepts](.navigation/basic.md)
 
 ### [Not so basic algorithms](.navigation/not_basic.md)
 
-### [Data structures](.navigation/data_structures.md)
+### [Classes and data structures](.navigation/data_structures.md)
 
 ### [C++ entities implementation](.navigation/cpp_things.md)
 

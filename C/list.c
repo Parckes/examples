@@ -7,13 +7,13 @@ typedef struct Nod{
 	char * data;
 //	size_t dataSize;
 	struct Nod * next;
-}Node;
+} Node;
 
 typedef struct Lst{
 	Node *head;
 	Node *tail;
 //	Node array[0];
-}List;
+} List;
 
 List * createList(){
 	List * tmp = calloc(1, sizeof(List));
@@ -49,8 +49,7 @@ void printList(List *lst){
 void destroyList(List * lst){
 	Node *p = lst->head;
 	Node * prev = 0;
-	while( p )
-	{
+	while (p) {
 		prev = p;
 		p = p->next;
 		free(prev);
@@ -105,14 +104,12 @@ void deleteL(List *lst, Node * del){
 	if(!del)
 		return;
 	Node *prev = lst->head;
-	if( del == lst->head)
-	{
+	if( del == lst->head) {
 		lst->head = lst->head->next;
 		free(prev);
 		return;
 	}
-	if(del->next == lst->tail)
-	{
+	if(del->next == lst->tail) {
 		free(lst->tail);
 		del->next = 0;
 		lst->tail = del;
@@ -122,7 +119,7 @@ void deleteL(List *lst, Node * del){
 	del->next = deleted->next;
 	free(deleted);
 };
-int main(){
+int main() {
 	char array[7] = {2, 4, 7, 8, 12, 44, 3};
 	char ardel[7] = { 3, 8, 12, 44, 2, 4, 7};
 	List *lst = createList();
@@ -155,8 +152,7 @@ int main(){
 	printf("get: %hhu\n", *(get->data));
 	deleteL(lst, get);
 	printList(lst);
-	for( int i = 0; i < 9; i++)  // 7 -> 9
-	{
+	for( int i = 0; i < 9; i++) {  // 7 -> 9
 		get = findL(lst, ardel[i]);
 		if(get)
 			printf("find: %hhu get: %hhu\n", ardel[i], *(get->data));
