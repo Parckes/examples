@@ -1,2 +1,2 @@
-# examples
-Examples of my coding
+# Here you can find examples of my coding
+___
