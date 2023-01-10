@@ -5,14 +5,12 @@
 
 typedef int elem;
 
-void HP (int n, int hp[])
-{
+void HP (int n, int hp[]) {
     for (int i = 0; i < n; ++i)
         scanf ("%d", &hp[i]);
     return;
 }
-void attack (int hp[], int n, int diff)
-{
+void attack (int hp[], int n, int diff) {
     int d;
     hp[n-1] -= diff;
     while (hp[n-1] < hp[n-2])
@@ -26,10 +24,8 @@ void attack (int hp[], int n, int diff)
     return;
 }
 
-void merge_sort_impl (elem* a, int size, elem* buff)
-    {
-    if (size <= 1)
-    {
+void merge_sort_impl (elem* a, int size, elem* buff) {
+    if (size <= 1) {
         return;
     }
     int lsize = size / 2;
@@ -40,44 +36,38 @@ void merge_sort_impl (elem* a, int size, elem* buff)
 
     int L = 0, R = lsize;
     int k = 0;
-    while (L < lsize && R < size)
-    {
+    while (L < lsize && R < size) {
         if (a[L] < a[R]) {
             buff[k++] = a[L++];
-        } else {
+        }
+        else {
             buff[k++] = a[R++];
         }
     }
-    while (L < lsize)
-    {
+    while (L < lsize) {
         buff[k++] = a[L++];
     }
-    while (R < size)
-    {
+    while (R < size) {
         buff[k++] = a[R++];
     }
     memcpy(a, buff, size * sizeof(elem));
 }
 
 
-void merge_sort(elem* a, int size)
-    {
-     if (size < 10000 / sizeof(elem))
-        {
+void merge_sort(elem* a, int size) {
+     if (size < 10000 / sizeof(elem)) {
         elem buff[size];
         merge_sort_impl(a, size, buff);
-        }
-     else
-        {
+     }
+     else {
         elem* buff = calloc (size, sizeof(elem));
         merge_sort_impl (a, size, buff);
         free (buff);
-        }
+     }
 }
 
 
-int main ()
-{
+int main () {
     int n, q, p;
     scanf ("%d %d %d ",&n, &p, &q);
 
@@ -95,8 +85,7 @@ int main ()
     int hp_size = n;
     merge_sort(hp, hp_size);
 
-    while ((hp[n-1] - gm) > 0)
-    {
+    while ((hp[n-1] - gm) > 0) {
         gm += q;
         attack (hp, n, diff);
         ++s;

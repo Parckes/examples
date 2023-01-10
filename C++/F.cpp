@@ -6,8 +6,7 @@
 
 using namespace std;
 
-struct Node
-{
+struct Node {
     int value;
     Node* left;
     Node* right;
@@ -16,10 +15,8 @@ struct Node
     Node (int x) : value(x), left(nullptr), right(nullptr) {}
 };
 
-void insert(Node*& root, int x)
-{
-    if (root == nullptr)
-    {
+void insert(Node*& root, int x) {
+    if (root == nullptr) {
         root = new Node(x);
         //root->parrent = parr;
         //printf("AA%dAA\n", root == nullptr);
@@ -32,8 +29,7 @@ void insert(Node*& root, int x)
         insert(root->right, x);
 }
 
-int find_height(Node* root)
-{
+int find_height(Node* root) {
     if (!root)
         return 0;
     if (!root->left && !root->right)
@@ -41,8 +37,7 @@ int find_height(Node* root)
     return 1 + max(find_height(root->left), find_height(root->right));
 }
 
-void print(Node* root)
-{
+void print(Node* root) {
     if(root->left)
         print(root->left);
     printf("%d\n", root->value);
@@ -50,19 +45,15 @@ void print(Node* root)
         print(root->right);
 }
 
-Node* max(Node* tree)
-{
+Node* max(Node* tree) {
     if (tree->right)
         return max(tree->right);
     return tree;
 }
 
-int second_max(Node* tree, vector<int>&  vec)
-{
-    while (tree->right == tree)
-    {
-        if (!tree->right->right)
-        {
+int second_max(Node* tree, vector<int>&  vec) {
+    while (tree->right == tree) {
+        if (!tree->right->right) {
             if (tree->right->left)
                 return max(tree->value, tree->right->left->value);
             return tree->value;
@@ -76,8 +67,7 @@ int second_max(Node* tree, vector<int>&  vec)
     return vec[i - 2];
 }
 
-void clean(Node* root)
-{
+void clean(Node* root) {
     if (root->left)
         clean(root->left);
     if (root->right)
@@ -85,15 +75,13 @@ void clean(Node* root)
     delete root;
 }
 
-int main()
-{
+int main() {
     Node* tree = nullptr;
     int height = 0;
     int a;
     vector<int> ra;
     scanf ("%d", &a);
-    while (a)
-    {
+    while (a) {
         ra.push_back(a);
         insert(tree, a);
         scanf ("%d", &a);
