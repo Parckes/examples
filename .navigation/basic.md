@@ -1,7 +1,7 @@
 ## Basic algorithms and concepts
 ### C++
 
-* [merge_sort.cpp](/C++/merge_sort.cpp) - Merge sort implementation
+* [merge_sort.cpp](../C++/merge_sort.cpp) - Merge sort implementation
 ___
 ### C
 * [O-QuiteMerge.c](../C/O-QuiteMerge.c) - merge of arrays with certain properties (smth close to heap merge)
