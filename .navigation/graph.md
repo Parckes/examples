@@ -1,6 +1,6 @@
 ## Here are structures for comfortable work with graphs
 
-* [IGraph](.navigation/igraph.hpp) - basic interface for all implementations
+* [IGraph](../C++/igraph.hpp) - basic interface for all implementations
 ### Different approaches for graph representation
 * [ArcGraph](../C++/arc_graph.hpp) - graph represented by an edge list
 * [MatrixGraph](../C++/matrix_graph.hpp) - graph represented by an adjacency matrix
