@@ -1,6 +1,6 @@
 ## Classes and data structures
 ### C++
-* [graph](/graph.md) - structures for working with graphs
+* [graph](.navigation//graph.md) - structures for working with graphs
 * [complex.hpp](../C++/complex.hpp) - structure for working with complex numbers
 * [seg_tree.cpp](../C++/seg_tree.cpp) - Segment tree implementation
 ___
